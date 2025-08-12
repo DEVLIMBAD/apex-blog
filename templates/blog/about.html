@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}About Us{% endblock %}
+
+{% block content %}
+<div class="about-container">
+    <div class="about-hero">
+        <h1>About Us</h1>
+        <p class="lead">Learn more about our mission and leap</p>
+    </div>
+    
+    <div class="about-content-card shadow-sm">
+        <div class="about-content-text">
+            {% if about %}
+                {{ about.content|linebreaks }}
+            {% else %}
+                <p>Welcome to our blog! We are passionate about sharing knowledge and insights on various topics.</p>
+                <p>Our team consists of experienced writers and enthusiasts who strive to provide valuable content to our readers.</p>
+                <p>Feel free to explore our posts, leave comments, and connect with us through our contact page.</p>
+                <p>Founded in 2025, our mission is to make people read.</p>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

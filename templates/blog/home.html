@@ -1,0 +1,15 @@
+{% comment %} <!-- templates/blog/home.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+</head>
+<body>
+    <h1>Welcome to Home Page!</h1>
+    {% if user.is_authenticated %}
+        <p>Hello, {{ user.username }} | <a href="{% url 'logout' %}">Logout</a></p>
+    {% else %}
+        <p><a href="{% url 'login' %}">Login</a> | <a href="{% url 'register' %}">Register</a></p>
+    {% endif %}
+</body>
+</html> {% endcomment %}
